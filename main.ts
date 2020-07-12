@@ -1,29 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-    basic.showNumber(520)
-})
-input.onGesture(Gesture.Shake, function () {
-    for (let index = 0; index < 99; index++) {
-        basic.showLeds(`
-            . # . # .
-            # . # . #
-            # . . . #
-            . # . # .
-            . . # . .
-            `)
-        basic.pause(100)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        basic.pause(100)
-    }
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showIcon(IconNames.Heart)
-})
 input.onButtonPressed(Button.B, function () {
-    basic.showString("I Love You")
+    music.playTone(494, music.beat(BeatFraction.Double))
 })
